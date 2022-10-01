@@ -7,36 +7,36 @@ class ComparableTest {
   @Test
   fun test_isGreaterThan() {
     val actual: Int = 42
-    assertThat(actual).isGreaterThan(0) // >
-    assertThat(actual).isGreaterThan(41) // >
-    // assertThat(actual).isGreaterThan(42) // >
+    assertThat(actual).isGreaterThan(0)
+    assertThat(actual).isGreaterThan(41)
+    // assertThat(actual).isGreaterThan(42) // 失敗
   }
 
   @Test
   fun test_isLessThan() {
     val actual: Int = 42
-    assertThat(actual).isLessThan(100) // <
-    assertThat(actual).isLessThan(43) // <
-    // assertThat(actual).isLessThan(42) // <
+    assertThat(actual).isLessThan(100)
+    assertThat(actual).isLessThan(43)
+    // assertThat(actual).isLessThan(42) // 失敗
   }
 
   @Test
   fun test_isAtLeast() {
     val actual: Int = 42
-    assertThat(actual).isAtLeast(0) // >=
-    assertThat(actual).isAtLeast(42) // >=
+    assertThat(actual).isAtLeast(0)
+    assertThat(actual).isAtLeast(42)
   }
 
   @Test
   fun test_isAtMost() {
     val actual: Int = 42
-    assertThat(actual).isAtMost(100)  // <=
-    assertThat(actual).isAtMost(42)  // <=
+    assertThat(actual).isAtMost(100)
+    assertThat(actual).isAtMost(42)
   }
 
   @Test
   fun test_isEquivalentAccordingToCompareTo() {
-    val actual: Comparable<Int> = 42 // IntならisEqualToを使うべき
+    val actual: Comparable<Int> = 42 // Intの場合はisEqualToを使うのがよい
     assertThat(actual).isEquivalentAccordingToCompareTo(42)
   }
 
