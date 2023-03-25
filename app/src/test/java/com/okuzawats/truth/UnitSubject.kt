@@ -24,7 +24,7 @@ class UnitSubject private constructor(
 
   companion object {
     /**
-     * start assertion of object with type Unit?
+     * start assertion of an object with type Unit?
      */
     fun assertThat(actual: Unit?): UnitSubject = assertAbout(unit()).that(actual)
 
