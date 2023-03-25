@@ -28,13 +28,6 @@ class UnitSubject private constructor(
      */
     fun assertThat(actual: Unit?): UnitSubject = assertAbout(unit()).that(actual)
 
-    private fun unit(): Factory<UnitSubject, Unit?> {
-      return Factory { metadata: FailureMetadata, subject: Unit? ->
-        UnitSubject(
-          metadata,
-          subject,
-        )
-      }
-    }
+    private fun unit(): Factory<UnitSubject, Unit?> = Factory(::UnitSubject)
   }
 }
