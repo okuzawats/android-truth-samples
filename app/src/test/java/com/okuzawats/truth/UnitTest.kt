@@ -1,6 +1,6 @@
 package com.okuzawats.truth
 
-import com.okuzawats.truth.UnitSubject.assertThat
+import com.okuzawats.truth.UnitSubject.Companion.assertThat
 import org.junit.Test
 
 class UnitTest {
