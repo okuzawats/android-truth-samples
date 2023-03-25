@@ -3,7 +3,6 @@ package com.okuzawats.truth
 import com.google.common.truth.FailureMetadata
 import com.google.common.truth.Subject
 import com.google.common.truth.Subject.Factory
-import com.google.common.truth.Truth
 import com.google.common.truth.Truth.assertAbout
 
 class UnitSubject private constructor(
